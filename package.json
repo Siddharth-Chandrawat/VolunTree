@@ -11,6 +11,6 @@
   "scripts": {
     "start:client": "npm run start --prefix client",
     "start:server": "npm run start --prefix server",
-    "start": "concurrently \"npm run start:client\" \"npm run start:server\""
+    "start": "concurrently \"PORT=3000 npm run start:client\" \"npm run start:server\""
   }
 }
