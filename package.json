@@ -1,11 +1,14 @@
 {
   "name": "voluntree",
   "private": true,
+  "workspaces": [
+    "client",
+    "server"
+  ],
   "devDependencies": {
     "concurrently": "^8.0.0"
   },
   "scripts": {
-    "postinstall": "npm install --prefix client && npm install --prefix server",
     "start:client": "npm run start --prefix client",
     "start:server": "npm run start --prefix server",
     "start": "concurrently \"npm run start:client\" \"npm run start:server\""
