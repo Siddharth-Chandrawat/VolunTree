@@ -15,7 +15,7 @@ const ResetPassword = () => {
       initialValues={{ password: '' }}
       onSubmit={async (values, { setSubmitting }) => {
         try {
-          await axios.post(`http://localhost:3001/auth/reset/${token}`, { password: values.password });
+          await axios.post(`https://voluntree-mje0.onrender.com/auth/reset/${token}`, { password: values.password });
           setMessage('Password has been reset');
         } catch (error) {
           setMessage('Error resetting password');
