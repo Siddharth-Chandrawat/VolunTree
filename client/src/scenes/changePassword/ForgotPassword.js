@@ -14,7 +14,7 @@ const ForgotPassword = () => {
       initialValues={{ email: '' }}
       onSubmit={async (values, { setSubmitting }) => {
         try {
-          await axios.post('http://localhost:3001/auth/forgot', { email: values.email });
+          await axios.post('https://voluntree-mje0.onrender.com/auth/forgot', { email: values.email });
           setMessage('Check your email for a reset link');
         } catch (error) {
           setMessage('Error sending reset link');
